@@ -27,19 +27,19 @@ public class BranchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_coursename);
 
         final String TAG = "BranchActivity";
-        final FirebaseFirestore db = FirebaseFirestore.getInstance();
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
         final List<String> branchlist = new ArrayList<>();
         final ListView listView = (ListView) findViewById(R.id.lv_courses);
 
 
-        db.collection("B.Tech")
+        db.collection("BTECH")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
-                                //Log.d(TAG, document.getId() + " => " + document.getData());
+                                //Log.d(TAG, document.getId() + " => ");
                                 //String c = document.getId();
                                 branchlist.add(document.getId());
                             }

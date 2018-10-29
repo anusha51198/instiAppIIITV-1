@@ -35,7 +35,7 @@ public class CourseNameActivity extends AppCompatActivity {
         final ListView listView = (ListView) findViewById(R.id.lv_courses);
 
 
-        db.collection("B.Tech").document(branch).collection(sem_no)
+        db.collection("BTECH").document(branch).collection(sem_no)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override

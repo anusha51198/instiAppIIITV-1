@@ -36,7 +36,7 @@ public class CourseDataActivity extends AppCompatActivity {
         final List<String> courseDataList = new ArrayList<>();
         final ListView listView = (ListView) findViewById(R.id.lv_courses);
 
-        db.collection("B.Tech").document(branch).collection(sem_no).document(course)
+        db.collection("BTECH").document(branch).collection(sem_no).document(course)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                     @Override

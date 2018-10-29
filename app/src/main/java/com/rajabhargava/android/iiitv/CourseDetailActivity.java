@@ -30,7 +30,7 @@ public class CourseDetailActivity extends AppCompatActivity {
 
         final FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-        db.collection("B.Tech").document(branch).collection(sem_no).document(course)
+        db.collection("BTECH").document(branch).collection(sem_no).document(course)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                     @Override
