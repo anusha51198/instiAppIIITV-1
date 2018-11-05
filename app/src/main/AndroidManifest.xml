@@ -16,11 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SemesterActivity"/>
-        <activity android:name=".CourseNameActivity"/>
-        <activity android:name=".BranchActivity"/>
-        <activity android:name=".CourseDataActivity"/>
-        <activity android:name=".CourseDetailActivity"/>
+        <activity android:name=".SemesterActivity" />
+        <activity android:name=".CourseNameActivity" />
+        <activity android:name=".BranchActivity" />
+        <activity android:name=".CourseDataActivity" />
+        <activity android:name=".CourseDetailActivity" />
+        <activity android:name=".QAActivity" />
+        <activity android:name=".Answer" />
+        <activity android:name=".addAnswerActivity" />
+        <activity android:name=".addThoughtActivity"></activity>
     </application>
 
 </manifest>

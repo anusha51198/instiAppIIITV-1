@@ -21,13 +21,23 @@ public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout dl;
     private ActionBarDrawerToggle adt;
-
+    private Button qabtn;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        qabtn = (Button) findViewById(R.id.b_qa);
+        qabtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,QAActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         dl = (DrawerLayout) findViewById(R.id.dl_main);
         adt = new ActionBarDrawerToggle(this,dl,R.string.open,R.string.close);
@@ -79,4 +89,5 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         return adt.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
     }
+
 }
