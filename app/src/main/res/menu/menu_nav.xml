@@ -6,9 +6,7 @@
         android:title="About"
         android:icon="@drawable/ic_code_black_24dp"
         android:clickable="true"
-        android:autoLink="web"
-        android:onClick="goTo4"
-        android:linksClickable="true"
+        android:onClick="about"
         >
 
     </item>
@@ -58,4 +56,5 @@
 
         >
     </item>
+
 </menu>

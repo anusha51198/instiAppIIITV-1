@@ -8,6 +8,7 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         dl = (DrawerLayout) findViewById(R.id.dl_main);
         adt = new ActionBarDrawerToggle(this,dl,R.string.open,R.string.close);
         adt.setDrawerIndicatorEnabled(true);
+        MenuItem last;
 
         dl.addDrawerListener(adt);
         adt.syncState();
@@ -2146,7 +2148,10 @@ public class MainActivity extends AppCompatActivity {
 //
 //                db.collection("BTECH").document("IT").collection("Summer 2").document
 //                        ("Design Project").set(itsdp2, SetOptions.merge());
-//
+
+//(
+
+
 
     }
     private void goToUrl (String url) {
@@ -2172,7 +2177,8 @@ public class MainActivity extends AppCompatActivity {
     public void goTo3(MenuItem item) {
         goToUrl ("http://iiitvadodara.ac.in/pdf/IIITV-Regulations-2018.pdf");
     }
-    public void goTo4(MenuItem item) {
-        goToUrl ("http://iiitvadodara.ac.in/about.php");
+   public void about(MenuItem item) {
+        Intent intent = new Intent (MainActivity.this,AboutActivity.class);
+        startActivity (intent);
     }
 }
